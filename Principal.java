@@ -3,6 +3,8 @@ import java.util.Scanner;
 // Adriene Peres
 // versao 1.0
 
+//teste
+
 public class Principal {
     private static Controle cont;
     private static Scanner ent;
