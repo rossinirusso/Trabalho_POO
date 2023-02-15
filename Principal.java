@@ -191,21 +191,21 @@ public class Principal {
     }
 
     private static String lerNome() {
-        // nome do cliente
+        //entrada para o nome do cliente
         Scanner ent = new Scanner(System.in);
         System.out.println("Insira seu nome: ");
         return ent.nextLine();
     }
 
     private static int lerIdade() {
-        // idade cliente
+        //entrada para a idade do cliente
         Scanner ent = new Scanner(System.in);
         System.out.println("Insira sua idade: ");
         return ent.nextInt();
     }
 
     private static String lerCpf() {
-        // cpf cliente
+        // entrada para o cpf do cliente
         Scanner leCPF = new Scanner(System.in);
         System.out.println("Insira o número do seu cpf: ");
         String aux = leCPF.nextLine();
@@ -213,28 +213,28 @@ public class Principal {
     }
 
     private static String lerMarca() {
-        // marca do carro/moto
+        // entrada para a marca do carro/moto
         Scanner ent = new Scanner(System.in);
         System.out.println("Insira a marca do veículo: ");
         return ent.nextLine();
     }
 
     private static String lerTipo() {
-        // tipo de veiculo
+        // entrada para o tipo de veiculo
         Scanner ent = new Scanner(System.in);
         System.out.println("Insira o tipo do veículo: ");
         return ent.nextLine();
     }
 
     private static String lerCambio() {
-        // tipo de cambio do veiculo
+        // entrada para o tipo de cambio do veiculo
         Scanner ent = new Scanner(System.in);
         System.out.println("Insira o tipo de câmbio do veículo: ");
         return ent.nextLine();
     }
 
     private static String lerPlaca() {
-        // placa do veículo
+        //entrada para a placa do veículo
         Scanner lePlaca = new Scanner(System.in);
         System.out.println("Insira a placa do veículo: ");
         String aux = lePlaca.nextLine();
@@ -242,28 +242,28 @@ public class Principal {
     }
 
     private static int lerQtdPortas() {
-        // quantidade de portas do carro
+        //entrada para a quantidade de portas do carro
         Scanner ent = new Scanner(System.in);
         System.out.println("Insira a quantidade de portas do carro: ");
         return ent.nextInt();
     }
 
     private static double lerTamnhoTanque() {
+        // entrada para o tamanho do tanque do carro a combustão
         Scanner ent = new Scanner(System.in);
-        // tamanho do tanque do carro a combustão
         System.out.println("Insira o tamanho do tanque: ");
         return ent.nextDouble();
     }
 
     private static String lerEstilo() {
-        // estilo da moto
+        // entrada para o estilo da moto
         Scanner ent = new Scanner(System.in);
         System.out.println("Insira o estilo da moto: ");
         return ent.nextLine();
     }
 
     private static double lerCapacidadeBateria() {
-        // capacidade da bateria de carro eletrico
+        //entrada para a capacidade da bateria de carro eletrico
         Scanner ent = new Scanner(System.in);
         System.out.print("Insira a capacidade da bateria: ");
         return ent.nextDouble();
@@ -271,7 +271,7 @@ public class Principal {
     }
 
     private static int lerQtdCilindros() {
-        // quantidade de cilindros do carro a gás
+        //entrada para a quantidade de cilindros do carro a gás
         Scanner ent = new Scanner(System.in);
         System.out.print("Insira a quantidade de cilindros: ");
         return ent.nextInt();
@@ -279,28 +279,28 @@ public class Principal {
     }
 
     private static double lerCapacidadeCilindro() {
-        // capaciadade dos cilindros
+        //entrada para a capaciadade dos cilindros
         Scanner ent = new Scanner(System.in);
         System.out.print("Insira a capacidade dos cilindros: ");
         return ent.nextDouble();
     }
 
     private static double lerPrecoFixo() {
-        // preço fixodo aluguel de determidado veiculo
+        // entrada para o preço fixo do aluguel de determidado veiculo
         Scanner ent = new Scanner(System.in);
         System.out.print("Insira o valor fixo do aluguel: ");
         return ent.nextDouble();
     }
 
     public static int lerQtdDias() {
-        // quantidade de dias que o veiculo será reservado
+        //entrada para a quantidade de dias que o veiculo será reservado
         Scanner ent = new Scanner(System.in);
         System.out.print("Insira a quatidade de dias que o veículo será reservado: ");
         return ent.nextInt();
     }
 
     public static int lerMesReserva() {
-        // mês no qual o veículo será reservado
+        //entrada para o mês no qual o veículo será reservado
         Scanner ent = new Scanner(System.in);
         System.out.print("Insira o número referente ao mês que gostaria de reservar o veículo: ");
         return ent.nextInt();
@@ -308,7 +308,7 @@ public class Principal {
     }
 
     public static int lerDataInicial() {
-        // primeiro dia no qual o veículo será reservado
+        // entrada para o primeiro dia no qual o veículo será reservado
         Scanner ent = new Scanner(System.in);
         System.out.print("Insira o dia inicial da reserva:  ");
         return ent.nextInt();
