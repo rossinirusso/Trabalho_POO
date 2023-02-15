@@ -43,6 +43,7 @@ public class Controle {
         cliente.remove(i);
     }
 
+    //metodo para ver se o cliente ja existe
     public boolean verificaCliente(String cpf) {
         return cliente.contains(buscarCliente(cpf));
     }

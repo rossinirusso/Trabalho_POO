@@ -436,6 +436,7 @@ public class Principal {
         if (cont.verificaCliente(cpf)) {
             Cliente c = cont.buscarCliente(cpf);
             System.out.println("Cliente já cadastrado!");
+            System.out.println("Escolha o veículo que deseja reservar:");
             visualizarVeiculos();
             String placa = lerPlaca();
             cont.fazReserva(c, lerQtdDias(), lerMesReserva(), lerDataInicial(), placa);
