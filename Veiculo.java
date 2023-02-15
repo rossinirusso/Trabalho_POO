@@ -44,6 +44,6 @@ public abstract class Veiculo {
 
     public String toString() {
         return "Marca: " + getMarca() + " \nTipo: " + getTipo() + " \nCambio: " + getCambio() + "\nPlaca: "
-                + getPlaca();
+                + getPlaca() + "\nValor Diária: " + GetvalorFixo();
     }
 }

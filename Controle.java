@@ -49,13 +49,7 @@ public class Controle {
 
     public void fazReserva(Cliente c, int qtdeDias, int mesReservado, int diaInicial, String placa) {
         Veiculo v = buscarVeiculo(placa);
-        if(buscaPlaca(placa)){
-        c.reservarVeiculo(qtdeDias, mesReservado, diaInicial, v);
-        }
-
-        else{
-            System.out.println("Veículo se encontra reservado no perído escolhido");
-        }
+        c.reservarVeiculo(qtdeDias, mesReservado, diaInicial, v);   
     }
 
     // Método que busca a placa e retorna um booleano caso p veiculo referente a
@@ -70,6 +64,9 @@ public class Controle {
                 return false;
             }
         }
+            else{
+                return false;
+            }
         }
         return false;
     }
@@ -100,7 +97,8 @@ public class Controle {
         System.out.println("--------------------------------");
 
     }
-
+    
+    //Verifica se o veículo está disponível para reserva 
     public boolean verificaDisponibilidade(String placa){
         if(buscaPlaca(placa)){
             return false;
@@ -112,5 +110,43 @@ public class Controle {
 
 
     }
+    
+    /*
+    public boolean verificaData(String placa){
+        Reserva r;
+        for (Cliente cliente2 : cliente) {
+            if(cliente2.getReserva() != null){
+                r = cliente2.getReserva();
 
+
+            }
+            
+        }
+
+    }
+   
+    
+
+
+    //teste
+    public boolean teste(String placa, int qtdeDias,int mesReservado, int diaInicial) {
+        Reserva r;
+        Veiculo atual;
+        for (Cliente cliente2 : cliente) {
+            if(cliente2.getReserva() != null){
+             r = cliente2.getReserva();   
+             atual = cliente2.getReserva().getVeiculo();
+            if (atual.getPlaca().equals(placa) && r.geraDataInicial()) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+            else{
+                return false;
+            }
+        }
+        return false;
+    }
+    */
 }

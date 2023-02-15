@@ -18,6 +18,6 @@ public class Combustao extends Carro {
 
     @Override
     public String toString() {
-        return super.toString() + " \ntamanho do Tanque: " + getTamanhoTanque();
+        return super.toString() + " \nTamanho do Tanque: " + getTamanhoTanque();
     }
 }
