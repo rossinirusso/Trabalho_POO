@@ -29,6 +29,13 @@ public class Controle {
         }
     }
 
+    public void visualizaClientes() {
+        for (Cliente c : cliente) {
+            System.out.println(c);
+            System.out.println("-----------------");
+        }
+    }
+
     public void cadastraCliente(Cliente c) {
         cliente.add(c);
     }
@@ -43,29 +50,29 @@ public class Controle {
         cliente.remove(i);
     }
 
-    //metodo para ver se o cliente ja existe
     public boolean verificaCliente(String cpf) {
         return cliente.contains(buscarCliente(cpf));
     }
 
     public void fazReserva(Cliente c, int qtdeDias, int mesReservado, int diaInicial, String placa) {
         Veiculo v = buscarVeiculo(placa);
-        c.reservarVeiculo(qtdeDias, mesReservado, diaInicial, v);   
+        int i = 0;
+
+        while (cliente.get(i) != c) {
+            i += 1;
+        }
+
+        cliente.get(i).reservarVeiculo(qtdeDias, mesReservado, diaInicial, v);
     }
 
     // Método que busca a placa e retorna um booleano caso p veiculo referente a
     // placa esteja reservado
     public boolean buscaPlaca(String placa) {
         for (Cliente cliente2 : cliente) {
-            if(cliente2.getReserva() != null){
             Veiculo atual = cliente2.getReserva().getVeiculo();
             if (atual.getPlaca().equals(placa)) {
                 return true;
             } else {
-                return false;
-            }
-        }
-            else{
                 return false;
             }
         }
@@ -98,56 +105,8 @@ public class Controle {
         System.out.println("--------------------------------");
 
     }
-    
-    //Verifica se o veículo está disponível para reserva 
-    public boolean verificaDisponibilidade(String placa){
-        if(buscaPlaca(placa)){
-            return false;
-            }
-    
-            else{
-                return true;
-            }
 
-
+    public ArrayList<Cliente> getCliente() {
+        return cliente;
     }
-    
-    /*
-    public boolean verificaData(String placa){
-        Reserva r;
-        for (Cliente cliente2 : cliente) {
-            if(cliente2.getReserva() != null){
-                r = cliente2.getReserva();
-
-
-            }
-            
-        }
-
-    }
-   
-    
-
-
-    //teste
-    public boolean teste(String placa, int qtdeDias,int mesReservado, int diaInicial) {
-        Reserva r;
-        Veiculo atual;
-        for (Cliente cliente2 : cliente) {
-            if(cliente2.getReserva() != null){
-             r = cliente2.getReserva();   
-             atual = cliente2.getReserva().getVeiculo();
-            if (atual.getPlaca().equals(placa) && r.geraDataInicial()) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-            else{
-                return false;
-            }
-        }
-        return false;
-    }
-    */
 }

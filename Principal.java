@@ -1,9 +1,15 @@
 import java.util.Scanner;
 
-// Adriene Peres
-// versao 1.0
-
-//testennjhj
+/**
+ * 
+ * Classe responsável por todo o tratamento de condições para que o mesmo
+ * veiculo não seja reservado no mesmo período, para que um cliente não reserve
+ * um veiculo não cadastrado, entre outros.
+ * 
+ * @author: Adriene Peres
+ * @author: Rossini Russo
+ * @version: versao 1.0
+ */
 
 public class Principal {
     private static Controle cont;
@@ -42,12 +48,11 @@ public class Principal {
         System.out.println("1 - Cadastrar Veículo");
         System.out.println("2 - Remover Veículo");
         System.out.println("3 - Visualizar Veículos");
-        System.out.println("4 - Conferir Disponibilidade");
-        System.out.println("5 - Cadastrar Cliente");
-        System.out.println("6 - Remover Cliente");
-        System.out.println("7 - Gerar Relatório");
-        System.out.println("8 - Menu inicial");
-        System.out.println("9 - Salvar");
+        System.out.println("4 - Cadastrar Cliente");
+        System.out.println("5 - Remover Cliente");
+        System.out.println("6 - Gerar Relatório");
+        System.out.println("7 - Menu inicial");
+        System.out.println("8 - Salvar");
         System.out.println("0 - Sair");
 
         System.out.println("\nDigite a opção desejada: ");
@@ -146,21 +151,18 @@ public class Principal {
                 visualizarVeiculos();
                 break;
             case 4:
-                conferirDisponibilidade();
-                break;
-            case 5:
                 cadastrarCliente();
                 break;
-            case 6:
+            case 5:
                 removerCliente();
                 break;
-            case 7:
+            case 6:
                 gerarRelatorio();
                 break;
-            case 8:
+            case 7:
                 escolheMenu();
                 break;
-            case 9:
+            case 8:
                 salvar();
                 break;
             default:
@@ -191,21 +193,21 @@ public class Principal {
     }
 
     private static String lerNome() {
-        //entrada para o nome do cliente
+        // nome do cliente
         Scanner ent = new Scanner(System.in);
         System.out.println("Insira seu nome: ");
         return ent.nextLine();
     }
 
     private static int lerIdade() {
-        //entrada para a idade do cliente
+        // idade cliente
         Scanner ent = new Scanner(System.in);
         System.out.println("Insira sua idade: ");
         return ent.nextInt();
     }
 
     private static String lerCpf() {
-        // entrada para o cpf do cliente
+        // cpf cliente
         Scanner leCPF = new Scanner(System.in);
         System.out.println("Insira o número do seu cpf: ");
         String aux = leCPF.nextLine();
@@ -213,28 +215,28 @@ public class Principal {
     }
 
     private static String lerMarca() {
-        // entrada para a marca do carro/moto
+        // marca do carro/moto
         Scanner ent = new Scanner(System.in);
         System.out.println("Insira a marca do veículo: ");
         return ent.nextLine();
     }
 
     private static String lerTipo() {
-        // entrada para o tipo de veiculo
+        // tipo de veiculo
         Scanner ent = new Scanner(System.in);
         System.out.println("Insira o tipo do veículo: ");
         return ent.nextLine();
     }
 
     private static String lerCambio() {
-        // entrada para o tipo de cambio do veiculo
+        // tipo de cambio do veiculo
         Scanner ent = new Scanner(System.in);
         System.out.println("Insira o tipo de câmbio do veículo: ");
         return ent.nextLine();
     }
 
     private static String lerPlaca() {
-        //entrada para a placa do veículo
+        // placa do veículo
         Scanner lePlaca = new Scanner(System.in);
         System.out.println("Insira a placa do veículo: ");
         String aux = lePlaca.nextLine();
@@ -242,28 +244,28 @@ public class Principal {
     }
 
     private static int lerQtdPortas() {
-        //entrada para a quantidade de portas do carro
+        // quantidade de portas do carro
         Scanner ent = new Scanner(System.in);
         System.out.println("Insira a quantidade de portas do carro: ");
         return ent.nextInt();
     }
 
     private static double lerTamnhoTanque() {
-        // entrada para o tamanho do tanque do carro a combustão
         Scanner ent = new Scanner(System.in);
+        // tamanho do tanque do carro a combustão
         System.out.println("Insira o tamanho do tanque: ");
         return ent.nextDouble();
     }
 
     private static String lerEstilo() {
-        // entrada para o estilo da moto
+        // estilo da moto
         Scanner ent = new Scanner(System.in);
         System.out.println("Insira o estilo da moto: ");
         return ent.nextLine();
     }
 
     private static double lerCapacidadeBateria() {
-        //entrada para a capacidade da bateria de carro eletrico
+        // capacidade da bateria de carro eletrico
         Scanner ent = new Scanner(System.in);
         System.out.print("Insira a capacidade da bateria: ");
         return ent.nextDouble();
@@ -271,7 +273,7 @@ public class Principal {
     }
 
     private static int lerQtdCilindros() {
-        //entrada para a quantidade de cilindros do carro a gás
+        // quantidade de cilindros do carro a gás
         Scanner ent = new Scanner(System.in);
         System.out.print("Insira a quantidade de cilindros: ");
         return ent.nextInt();
@@ -279,28 +281,28 @@ public class Principal {
     }
 
     private static double lerCapacidadeCilindro() {
-        //entrada para a capaciadade dos cilindros
+        // capaciadade dos cilindros
         Scanner ent = new Scanner(System.in);
         System.out.print("Insira a capacidade dos cilindros: ");
         return ent.nextDouble();
     }
 
     private static double lerPrecoFixo() {
-        // entrada para o preço fixo do aluguel de determidado veiculo
+        // preço fixodo aluguel de determidado veiculo
         Scanner ent = new Scanner(System.in);
         System.out.print("Insira o valor fixo do aluguel: ");
         return ent.nextDouble();
     }
 
     public static int lerQtdDias() {
-        //entrada para a quantidade de dias que o veiculo será reservado
+        // quantidade de dias que o veiculo será reservado
         Scanner ent = new Scanner(System.in);
         System.out.print("Insira a quatidade de dias que o veículo será reservado: ");
         return ent.nextInt();
     }
 
     public static int lerMesReserva() {
-        //entrada para o mês no qual o veículo será reservado
+        // mês no qual o veículo será reservado
         Scanner ent = new Scanner(System.in);
         System.out.print("Insira o número referente ao mês que gostaria de reservar o veículo: ");
         return ent.nextInt();
@@ -308,7 +310,7 @@ public class Principal {
     }
 
     public static int lerDataInicial() {
-        // entrada para o primeiro dia no qual o veículo será reservado
+        // primeiro dia no qual o veículo será reservado
         Scanner ent = new Scanner(System.in);
         System.out.print("Insira o dia inicial da reserva:  ");
         return ent.nextInt();
@@ -367,19 +369,38 @@ public class Principal {
         cont.visualizaVeiculos();
     }
 
-    private static boolean conferirDisponibilidade() {
+    private static boolean conferirDisponibilidade(int qtdeDias, int mes, int dataInicial, String placa) {
         System.out.println("----------------------------------------------------------");
         System.out.println("\nConferir disponibilidade");
         System.out.println();
 
-        Scanner ent = new Scanner(System.in);
-        String placa = ent.nextLine();
-        if (cont.buscaPlaca(placa)) { // se a placa for encontrada
-            if (verificar.data) {
+        for (Cliente c : cont.getCliente()) {
 
+            if (c.getReserva() != null) {
+
+                String placaReservada = c.getReserva().getVeiculo().getPlaca();
+                int diafinalDesejado = (dataInicial + qtdeDias);
+                int diaFinalReservado = c.getReserva().getQtdeDias() + c.getReserva().getDiaInicial();
+
+                if (placa.equals(placaReservada)) {
+
+                    if (mes == c.getReserva().getMesReservado()) {
+
+                        if (dataInicial == c.getReserva().getDiaInicial()) {
+                            System.out.println("O Veículo Já foi reservado nesta data. Escolha outro período");
+                            return false;
+                        }
+
+                        else if (diafinalDesejado == c.getReserva().getDiaInicial()) {
+                            return false;
+                        }
+
+                        else if (diafinalDesejado <= diaFinalReservado) {
+                            return false;
+                        }
+                    }
+                }
             }
-        } else {
-
         }
         return true;
     }
@@ -418,12 +439,13 @@ public class Principal {
         } else {
             System.out.println("Cliente Nao Encontrado!");
         }
-
     }
 
     private static void gerarRelatorio() {
+        System.out.println("------------VEICULOS--------------");
         cont.visualizaVeiculos();
-
+        System.out.println("------------CLIENTES--------------");
+        cont.visualizaClientes();
     }
 
     private static void salvar() {
@@ -432,16 +454,29 @@ public class Principal {
 
     private static void fazerReserva() {
         String cpf = lerCpf();
+        boolean reservou = false;
+        String placa;
+        int qtdeDias;
+        int mes;
+        int dataInicial;
 
         if (cont.verificaCliente(cpf)) {
             Cliente c = cont.buscarCliente(cpf);
             System.out.println("Cliente já cadastrado!");
-            System.out.println("Escolha o veículo que deseja reservar:");
             visualizarVeiculos();
-            String placa = lerPlaca();
-            cont.fazReserva(c, lerQtdDias(), lerMesReserva(), lerDataInicial(), placa);
-            System.out.println("Veiculo reservado com sucesso!");
-            cont.infoReserva(c);
+            placa = lerPlaca();
+            qtdeDias = lerQtdDias();
+            mes = lerMesReserva();
+            dataInicial = lerDataInicial();
+
+            if (conferirDisponibilidade(qtdeDias, mes, dataInicial, placa)) {
+                cont.fazReserva(c, qtdeDias, mes, dataInicial, placa);
+                System.out.println("Veiculo reservado com sucesso!");
+                cont.infoReserva(c);
+
+            } else {
+                System.out.println("Veiculo já cadastrado durante os dias especificados. Selecione outro período");
+            }
 
         } else {
             System.out.println("Para fazer reserva é necessário fazer um cadastro!");
@@ -450,18 +485,24 @@ public class Principal {
             System.out.println("Cadastro realizado com sucesso!");
             System.out.println("Escolha o veículo que deseja reservar:");
             visualizarVeiculos();
-            String placa = lerPlaca();
-            if(cont.verificaDisponibilidade(placa)){
-            cont.fazReserva(c, lerQtdDias(), lerMesReserva(), lerDataInicial(), placa);
-            System.out.println("Veiculo reservado com sucesso!");
-            cont.infoReserva(c);
-            }
-            else{
-                System.out.println("Veículo se encontra reservado no perído escolhido");
-            }
-            
 
+            placa = lerPlaca();
+
+            do {
+                qtdeDias = lerQtdDias();
+                mes = lerMesReserva();
+                dataInicial = lerDataInicial();
+
+                if (conferirDisponibilidade(qtdeDias, mes, dataInicial, placa)) {
+                    cont.fazReserva(c, qtdeDias, mes, dataInicial, placa);
+                    System.out.println("Veiculo reservado com sucesso!");
+                    cont.infoReserva(c);
+                    reservou = true;
+
+                } else {
+                    System.out.println("Veiculo já cadastrado durante os dias especificados. Selecione outro período");
+                }
+            } while (!reservou);
         }
     }
-
 }
